@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>animalsitter.co — Home</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="home">
+  <header class="topbar">
+    <div class="topbar-inner container">
+      <div class="brand">
+        <div class="brand-badge">AS</div>
+        <div>animalsitter.co</div>
+      </div>
+
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="swipe.html">Swipe</a>
+        <a href="pets.html">Pets</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="badge">
+          <span class="dot"></span>
+          <span id="who">Not signed in</span>
+          <span class="muted">·</span>
+          <b id="role">—</b>
+        </div>
+
+        <form id="signinForm" class="row" style="display:flex;">
+          <input id="emailInput" class="input" style="width:220px;" placeholder="email to sign in" />
+          <button class="btn primary" type="submit">Sign In</button>
+        </form>
+
+        <button id="signoutBtn" class="btn" style="display:none;">Sign Out</button>
+
+        <div class="stack" style="gap:6px;min-width:220px;">
+          <div class="smalllabel">Local test role (optional)</div>
+          <select id="roleSelect" class="select" disabled>
+            <option>CLIENT</option>
+            <option>SITTER</option>
+            <option>EMPLOYEE</option>
+            <option>ADMIN</option>
+          </select>
+          <div id="roleHint" class="smalllabel"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- SECTION 1: Map -->
+    <section class="card section">
+      <h2>Active Sitters Map</h2>
+      <div class="muted">Real active sitters only (no demos). If none are active, you’ll see an empty-state message.</div>
+      <div class="hr"></div>
+      <div id="activeMap" class="mapbox"></div>
+    </section>
+
+    <!-- SECTION 2: Active sitters list -->
+    <section class="card section" style="margin-top:14px;">
+      <h2>Active Sitters</h2>
+      <div class="muted">Browse sitters who are currently active and approved.</div>
+      <div class="hr"></div>
+      <div id="activeSittersList"></div>
+    </section>
+
+    <!-- SECTION 3: Ratings -->
+    <section class="card section" style="margin-top:14px;">
+      <h2>Ratings</h2>
+      <div id="ratingsSection"></div>
+    </section>
+
+    <!-- SECTION 4: Gallery -->
+    <section class="card section" style="margin-top:14px;">
+      <h2>Gallery</h2>
+      <div id="gallery"></div>
+    </section>
+
+    <!-- SECTION 5: Footer -->
+    <footer class="footer card">
+      <div class="footer-inner">
+        <div>animalsitter.co — Since 2025</div>
+        <div class="social">
+          <a href="#" onclick="return false;">Instagram</a>
+          <a href="#" onclick="return false;">TikTok</a>
+          <a href="#" onclick="return false;">X</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

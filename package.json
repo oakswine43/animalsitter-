@@ -1,0 +1,14 @@
+{
+  "name": "animalsitter-monorepo",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "cd backend && npm install",
+    "start": "cd backend && npm start",
+    "db:init": "cd backend && npm run db:init",
+    "seed": "cd backend && npm run seed"
+  }
+}
